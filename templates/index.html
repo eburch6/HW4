@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "/static/style.css" />
+        <title> List of Favorite Shows </title>
+    </head>
+    <body>
+        <h1> Eric's Favorite Shows </h1>
+        <ol>
+            {%for i in range(0, len) %}
+                {% if favShows[i] == "Avatar the Last Airbender" %}
+                    <li class = "special"> {{favShows[i]}} <img src={{showPics[i]}}/> </li>
+                {% else %}
+                    <li> {{favShows[i]}} <img src={{showPics[i]}}/> </li>
+                {%endif%}
+            {%endfor%}
+        </ol>
+    </body>
+</html>
